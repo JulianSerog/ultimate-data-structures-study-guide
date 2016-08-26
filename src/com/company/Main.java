@@ -17,6 +17,13 @@ public class Main {
         System.out.println("selection sort" + Arrays.toString(SortingMethods.selectionSort(arr)));
 
 
+        System.out.println(); //white space for better readability in terminal
+        //linked lists
+        LinkedList list = new LinkedList();
+        list.add(4);
+        System.out.print("list: ");
+        list.print();
+        System.out.println(); //white space for better readability in terminal
 
 
         //BST methods
