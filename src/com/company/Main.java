@@ -21,6 +21,8 @@ public class Main {
         //linked lists
         LinkedList list = new LinkedList();
         list.add(4);
+        list.add(55);
+        list.add(32);
         System.out.print("list: ");
         list.print();
         System.out.println(); //white space for better readability in terminal
@@ -33,7 +35,7 @@ public class Main {
         tree.addNode(10, tree.root);
 
         //printing methods
-        System.out.println("\ninOrder");
+        System.out.println("inOrder");
         tree.inOrder(tree.root);
         System.out.println("\npreorder");
         tree.preOrder(tree.root);

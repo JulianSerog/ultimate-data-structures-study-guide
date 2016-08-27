@@ -8,52 +8,43 @@ public class LinkedList {
 
 
 
-    public Node start;
-    public Node end;
+    public Node head;
+    public Node tail;
 
 
     public void add(int value) {
-        if (this.start == null) {
-            //set variables for start and end nodes
-            this.start = new Node(value);
-            this.end = this.start;
+        if (this.head == null) {
+            if (tail != null)
+                throw new AssertionError();
+
+
+            //set variables for head and tail nodes
+            this.head = new Node(value);
+            this.tail = this.head;
 
             //set variables for pointers
-            this.end.left = start;
-            this.end.right = this.start;
-            this.start.right = this.end;
-            this.start.left = this.end;
+            this.tail.right = this.head;
+            this.head.left = this.tail;
         } else {
-            Node current = this.start;
-            while(current.right != this.start) {
-                current = current.right;
-            }
-
-
-
-
-            if (this.start.right == this.start) {
-                this.start.right = new Node(value);
-                this.end = this.start.right;
-                //set pointers
-                this.end.left = this.start;
-                this.end.right = this.start;
-            }
+            this.tail.right = new Node(this.tail, this.head, value);
+            this.tail = this.tail.right;
         }//else
     }//addNode
 
 
 
     public void print() {
-        Node current = this.start;
+        Node current = this.head;
         if (current == null)
             System.out.println("No data in DLL!");
         else {
-            System.out.print(current.data + " ");
-            current = current.right;
-            while(current.right != this.start) {
+
+
+            while(current.right != this.head) {
                 System.out.print(current.data + " ");
+                current = current.right;
             }//while
+            System.out.println(current.data + " ");
         }//else
 
     }//print
