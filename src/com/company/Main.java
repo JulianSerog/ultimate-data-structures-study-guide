@@ -16,6 +16,8 @@ public class Main {
         //Selection sort
         System.out.println("selection sort" + Arrays.toString(SortingMethods.selectionSort(arr)));
 
+        System.out.println("merge sort" + Arrays.toString(SortingMethods.mergeSort(arr)));
+
 
         System.out.println(); //white space for better readability in terminal
         //linked lists
@@ -42,6 +44,18 @@ public class Main {
         System.out.println("\npostorder");
         tree.postOrder(tree.root);
 
+
+
+        //RANDOM THINGS YOU SHOULD KNOW HOW TO DO
+        //reverse a string in place
+        char[] string = new String("Hello World").toCharArray();
+        System.out.println("\nbefore reverse: " + Arrays.toString(string));
+        for (int i = 0, j = string.length-1; i < string.length/2; i++, j--) {
+            char temp = string[i];
+            string[i] = string[j];
+            string[j] = temp;
+        }//for
+        System.out.println("after reverse: " + Arrays.toString(string));
     }//main method
 }//Main Class
 
