@@ -16,6 +16,17 @@ import static org.junit.Assert.*;
  *
  */
 public class HashTableTest {
+    HashTable<String, Integer> table;
+
+    @Before
+    public void setUp() throws Exception {
+        table = new HashTable<>();
+        //would be using a mocking framework to separate dependency
+        table.put("Richard", 21);
+        table.put("Jake", 19);
+        table.put("Donna", 33);
+    }
+
     @Test
     public void size() throws Exception {
         assertFalse(table.size() == 0);
@@ -99,17 +110,6 @@ public class HashTableTest {
     public void entrySet() throws Exception {
         //(should change to check entry values)
         System.out.println(table.entrySet());
-    }
-
-    HashTable<String, Integer> table;
-
-    @Before
-    public void setUp() throws Exception {
-        table = new HashTable<>();
-        //would be using a mocking framework to separate dependency
-        table.put("Richard", 21);
-        table.put("Jake", 19);
-        table.put("Donna", 33);
     }
 
     @Test
