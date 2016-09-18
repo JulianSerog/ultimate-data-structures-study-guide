@@ -3,4 +3,4 @@ The ultimate data structures study guide. Meant as a tool for studying for job i
 
 To import this project, simply just import the base content as a java project in IntelliJ, Eclipse, or any other IDE of your preference.
 
-This project was created by Esa Julian Serog.
+This project was created by Esa Julian Serog and Richard Saney.
