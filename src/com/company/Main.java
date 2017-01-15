@@ -25,8 +25,14 @@ public class Main {
         list.add(4);
         list.add(55);
         list.add(32);
+        list.add(37);
+        list.add(88);
+        list.remove(3);
+        //list.remove(4); //should cause out of index out of bounds error
+
         System.out.print("list: ");
         list.print();
+        System.out.println("size: " + list.size());
         System.out.println(); //white space for better readability in terminal
 
 

@@ -31,6 +31,37 @@ public class LinkedList {
         }//else
     }//addNode
 
+    public void remove(int index) {
+        if (index > this.size() - 1) throw new IndexOutOfBoundsException(); //throw error if out of bounds
+        Node c = this.head;
+        int counter = 0;
+        while(counter != index) {
+            c = c.right;
+            counter++;
+        }
+        c.left.right = c.right;
+        c = null;
+    }
+
+    public boolean isEmpty() {
+        if (this.head == null) return true;
+        else return false;
+    }
+
+    public int size() {
+        int size = 0;
+        if (this.isEmpty()) return 0;
+        else {
+            size++;
+            Node c = this.head;
+            while (c.right != this.head) {
+                c = c.right;
+                size++;
+            }
+            return size;
+        }//else
+    }
+
 
 
     public void print() {
